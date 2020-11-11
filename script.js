@@ -23,14 +23,12 @@ function onLoad() {
   console.log("ESTOS SON USUARIOS DE DIFERENTES PAISES: ");
 
   createUsers();
-  const spanishUsers = filterUsers(arrayUsers);
-  //Muestro lista de todos los usuarios.
-  console.log(arrayUsers);
-  //Muestro lista de usuarios España.
-  console.log(spanishUsers);
-}
-function createUsers() {
-  arrayUsers = [
+  const spainUser= filterUsers(arrayUsuarios);
+  console.log(arrayUsuarios);
+  console.log(spainUser);
+
+  function createUsers() {
+  arrayUsuarios = [
     { name: "usuario1", country: "spain", money: 199, premiumAccount: true },
     { name: "usuario2", country: "france", money: 0, premiumAccount: false },
     { name: "usuario3", country: "spain", money: 537, premiumAccount: false },
@@ -40,7 +38,10 @@ function createUsers() {
     { name: "usuario7", country: "spain", money: 3345, premiumAccount: false }
   ];
 }
-// Con esta funcion filtro los usuarios que de España.
-function filterUsers(users) {
-  return users.filter(user => user.country === "spain" && user.money > 200);
+
+  function filterUsers(users) {
+  return users.filter(user => user.country == "spain" && user.money > 200);
 }
+}
+
+
